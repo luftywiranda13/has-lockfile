@@ -1,6 +1,6 @@
 {
   "name": "has-lockfile",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Check which lockfile is present in the working directory",
   "license": "MIT",
   "repository": "https://github.com/luftywiranda13/has-lockfile.git",
