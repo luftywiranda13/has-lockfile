@@ -1,0 +1,48 @@
+{
+  "name": "has-lockfile",
+  "version": "0.0.0",
+  "description": "Check which lockfile is present in the working directory",
+  "license": "MIT",
+  "repository": "https://github.com/luftywiranda13/has-lockfile.git",
+  "author": {
+    "name": "Lufty Wiranda",
+    "email": "lufty.wiranda@gmail.com",
+    "url": "https://www.instagram.com/luftywiranda13"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "yarn",
+    "lockfile",
+    "lock file",
+    "package-lock",
+    "has",
+    "detect",
+    "is",
+    "project",
+    "app",
+    "module",
+    "package",
+    "manager",
+    "npm"
+  ],
+  "dependencies": {
+    "has-package-lock": "^1.0.0",
+    "has-yarn": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "esnext": true,
+    "space": true
+  }
+}
