@@ -1,7 +1,5 @@
 # has-lockfile [![Build Status](https://img.shields.io/travis/luftywiranda13/has-lockfile/master.svg?style=flat-square)](https://travis-ci.org/luftywiranda13/has-lockfile)
 
-> Check which lockfile is present in the working directory
-
 Useful for tools that needs to know whether to use yarn or npm to install dependencies.
 
 ## Install
@@ -9,7 +7,6 @@ Useful for tools that needs to know whether to use yarn or npm to install depend
 ```sh
 npm install --save has-lockfile
 ```
-
 
 ## Usage
 
@@ -37,7 +34,6 @@ hasLockfile('bar');
 hasLockfile('baz');
 //=> null
 ```
-
 
 ## API
 
