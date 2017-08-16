@@ -2,7 +2,7 @@
 
 Useful for tools that needs to know whether to use yarn or npm to install dependencies.
 
-## Install
+## Installation
 
 ```sh
 npm install --save has-lockfile
