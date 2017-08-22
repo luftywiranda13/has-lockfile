@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Check which lockfile is present in the working directory",
   "license": "MIT",
-  "repository": "https://github.com/luftywiranda13/has-lockfile.git",
+  "repository": "https://github.com/luftywiranda13/has-lockfile",
   "author": {
     "name": "Lufty Wiranda",
     "email": "lufty.wiranda@gmail.com",
@@ -13,11 +13,31 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava"
+    "precommit": "remove-lockfiles",
+    "test": "xo && jest"
   },
   "files": [
     "index.js"
   ],
+  "dependencies": {
+    "has-package-lock": "^1.0.0",
+    "has-yarn": "^1.0.0"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "jest": "^20.0.4",
+    "remove-lockfiles": "^1.1.1",
+    "xo": "^0.18.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "xo": {
+    "space": true,
+    "envs": [
+      "jest"
+    ]
+  },
   "keywords": [
     "yarn",
     "lockfile",
@@ -32,16 +52,5 @@
     "package",
     "manager",
     "npm"
-  ],
-  "dependencies": {
-    "has-package-lock": "^1.0.0",
-    "has-yarn": "^1.0.0"
-  },
-  "devDependencies": {
-    "ava": "^0.20.0",
-    "xo": "^0.18.2"
-  },
-  "xo": {
-    "space": true
-  }
+  ]
 }

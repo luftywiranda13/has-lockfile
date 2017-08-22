@@ -1,10 +1,9 @@
-import test from 'ava';
+'use strict';
 
-import m from './';
+const hasLockfile = require('./');
 
-test(t => {
-  t.is(m('fixtures/bar'), 'package-lock.json');
-  t.is(m('fixtures/baz'), null);
-  t.is(m('fixtures/foo'), 'yarn.lock');
-  t.is(m(), null);
+test('output', () => {
+  expect(hasLockfile('fixtures/bar')).toBe('package-lock.json');
+  expect(hasLockfile('fixtures/baz')).toBe(null);
+  expect(hasLockfile('fixtures/foo')).toBe('yarn.lock');
 });
