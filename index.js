@@ -4,11 +4,12 @@ const hasPackageLock = require('has-package-lock');
 const hasYarn = require('has-yarn');
 
 module.exports = cwd => {
+  cwd = cwd || process.cwd();
   let lockfile = null;
 
-  if (hasPackageLock(cwd || process.cwd())) {
+  if (hasPackageLock(cwd)) {
     lockfile = 'package-lock.json';
-  } else if (hasYarn(cwd || process.cwd())) {
+  } else if (hasYarn(cwd)) {
     lockfile = 'yarn.lock';
   }
 
