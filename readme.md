@@ -19,11 +19,11 @@ npm install --save has-lockfile
 ```
 .
 ├── foo
-    ├── package.json
-    └── yarn.lock
-└── bar
-    ├── package.json
-    └── package-lock.json
+│   ├── package.json
+│   └── yarn.lock
+├── bar
+│   ├── package.json
+│   └── package-lock.json
 └── baz
     └── package.json
 ```
