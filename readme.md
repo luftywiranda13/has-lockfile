@@ -1,7 +1,5 @@
 # has-lockfile
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/luftywiranda13/has-lockfile.svg)](https://greenkeeper.io/)
-
 [![Package Version](https://img.shields.io/npm/v/has-lockfile.svg)](https://www.npmjs.com/package/has-lockfile)
 [![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/has-lockfile/master.svg)](https://travis-ci.org/luftywiranda13/has-lockfile)
 [![Downloads Status](https://img.shields.io/npm/dm/has-lockfile.svg)](https://npm-stat.com/charts.html?package=has-lockfile&from=2016-04-01)
