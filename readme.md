@@ -58,6 +58,7 @@ Current working directory.
 
 - [has-yarn](https://github.com/sindresorhus/has-yarn) - Check if a project is using Yarn
 - [has-package-lock](https://github.com/luftywiranda13/has-package-lock) - Check if a `package-lock.json` is present in the working directory
+- [pkg-man](https://github.com/luftywiranda13/pkg-man) - Detect which package manager that should be used
 
 ## License
 
