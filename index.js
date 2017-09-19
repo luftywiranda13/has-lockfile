@@ -5,13 +5,16 @@ const hasYarn = require('has-yarn');
 
 module.exports = cwd => {
   cwd = cwd || process.cwd();
-  let lockfile = null;
+
+  const lockfiles = [];
 
   if (hasPackageLock(cwd)) {
-    lockfile = 'package-lock.json';
-  } else if (hasYarn(cwd)) {
-    lockfile = 'yarn.lock';
+    lockfiles.push('package-lock.json');
   }
 
-  return lockfile;
+  if (hasYarn(cwd)) {
+    lockfiles.push('yarn.lock');
+  }
+
+  return lockfiles;
 };

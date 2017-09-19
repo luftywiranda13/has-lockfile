@@ -3,7 +3,9 @@
 const hasLockfile = require('./');
 
 test('output', () => {
-  expect(hasLockfile('fixtures/bar')).toBe('package-lock.json');
-  expect(hasLockfile('fixtures/baz')).toBe(null);
-  expect(hasLockfile('fixtures/foo')).toBe('yarn.lock');
+  expect(hasLockfile()).toEqual([]);
+  expect(hasLockfile('fixtures')).toEqual(['package-lock.json', 'yarn.lock']);
+  expect(hasLockfile('fixtures/bar')).toEqual(['package-lock.json']);
+  expect(hasLockfile('fixtures/baz')).toEqual([]);
+  expect(hasLockfile('fixtures/foo')).toEqual(['yarn.lock']);
 });
