@@ -6,7 +6,7 @@
 
 Check which lockfile is present in the working directory.
 
-Useful for tools that needs to know whether to use yarn or npm to install dependencies.
+Useful for tools that needs to know whether to use yarn or npm.
 
 ## Installation
 
@@ -24,28 +24,35 @@ npm install --save has-lockfile
 ├── bar
 │   ├── package.json
 │   └── package-lock.json
-└── baz
-    └── package.json
+├── baz
+│   └── package-lock.json
+└── qux
+    ├── package.json
+    ├── package-lock.json
+    └── yarn.lock
 ```
 
 ```js
 const hasLockfile = require('has-lockfile');
 
 hasLockfile('foo');
-//=> yarn.lock
+//=> ['yarn.lock']
 
 hasLockfile('bar');
-//=> package-lock.json
+//=> ['package-lock.json']
 
 hasLockfile('baz');
-//=> null
+//=> []
+
+hasLockfile('qux');
+//=> ['package-lock.json', 'yarn-lock']
 ```
 
 ## API
 
 ### hasLockfile([cwd])
 
-Returns one of `package-lock.json`, `yarn.lock`, or `null`.
+Returns `Array<string>`.
 
 #### cwd
 
