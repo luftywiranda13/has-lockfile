@@ -3,7 +3,7 @@
 const hasPackageLock = require('has-package-lock');
 const hasYarn = require('has-yarn');
 
-module.exports = cwd => {
+const hasLockfile = cwd => {
   cwd = cwd || process.cwd();
 
   const lockfiles = [];
@@ -18,3 +18,5 @@ module.exports = cwd => {
 
   return lockfiles;
 };
+
+module.exports = hasLockfile;
