@@ -1,21 +1,23 @@
 {
   "name": "has-lockfile",
   "version": "2.0.0",
-  "description": "Check which lockfile is present in the working directory",
+  "description": "Detect lockfiles in the working directory",
   "license": "MIT",
   "repository": "https://github.com/luftywiranda13/has-lockfile",
   "author": {
     "name": "Lufty Wiranda",
     "email": "lufty.wiranda@gmail.com",
-    "url": "https://www.instagram.com/luftywiranda13"
+    "url": "https://www.luftywiranda.com"
   },
   "engines": {
     "node": ">=4"
   },
   "scripts": {
-    "precommit": "remove-lockfiles",
+    "precommit": "remove-lockfiles && xo --fix && lint-staged",
+    "lint": "xo",
     "pretest": "remove-lockfiles",
-    "test": "xo && jest"
+    "test:watch": "jest --watch",
+    "test": "jest --coverage"
   },
   "files": [
     "index.js"
@@ -25,16 +27,29 @@
     "has-yarn": "^1.0.0"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^2.9.0",
     "husky": "^0.14.3",
-    "jest": "^21.1.0",
-    "remove-lockfiles": "^1.3.0",
+    "jest": "^22.0.4",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2",
+    "remove-lockfiles": "^1.4.2",
     "xo": "^0.18.2"
   },
   "jest": {
     "testEnvironment": "node"
   },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "xo": {
-    "space": true,
+    "extends": "prettier",
     "envs": [
       "jest"
     ]
