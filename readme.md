@@ -7,7 +7,7 @@
 
 Check lockfiles in the working directory.
 
-Useful for tools that needs to know whether to use yarn or npm.
+Useful for tools that needs to know whether to use `yarn` or `npm`.
 
 ## Installation
 
