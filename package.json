@@ -1,7 +1,7 @@
 {
   "name": "has-lockfile",
   "version": "2.0.0",
-  "description": "Check which lockfile is present in the working directory",
+  "description": "Check lockfiles in the working directory",
   "license": "MIT",
   "repository": "https://github.com/luftywiranda13/has-lockfile",
   "author": {
@@ -31,7 +31,8 @@
     "xo": "^0.18.2"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "collectCoverage": true
   },
   "xo": {
     "space": true,
