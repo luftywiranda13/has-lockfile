@@ -5,7 +5,7 @@
 [![Coverage Status](https://img.shields.io/codecov/c/github/luftywiranda13/has-lockfile/master.svg)](https://codecov.io/gh/luftywiranda13/has-lockfile)
 [![Downloads Status](https://img.shields.io/npm/dm/has-lockfile.svg)](https://npm-stat.com/charts.html?package=has-lockfile&from=2016-04-01)
 
-Check lockfiles in the working directory.
+> Detect lockfiles in the working directory.
 
 Useful for tools that needs to know whether to use `yarn` or `npm`.
 
