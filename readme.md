@@ -17,33 +17,34 @@ npm install --save has-lockfile
 
 ## Usage
 
-```
+```sh
+$ tree
 .
+├── bar
+│   ├── package-lock.json
+│   └── package.json
+├── baz
+│   └── package.json
 ├── foo
 │   ├── package.json
 │   └── yarn.lock
-├── bar
-│   ├── package.json
-│   └── package-lock.json
-├── baz
-│   └── package-lock.json
 └── qux
-    ├── package.json
     ├── package-lock.json
+    ├── package.json
     └── yarn.lock
 ```
 
 ```js
 const hasLockfile = require('has-lockfile');
 
-hasLockfile('foo');
-//=> ['yarn.lock']
-
 hasLockfile('bar');
 //=> ['package-lock.json']
 
 hasLockfile('baz');
 //=> []
+
+hasLockfile('foo');
+//=> ['yarn.lock']
 
 hasLockfile('qux');
 //=> ['package-lock.json', 'yarn-lock']
@@ -64,9 +65,9 @@ Current working directory.
 
 ## Related
 
-- [has-yarn](https://github.com/sindresorhus/has-yarn) - Check if a project is using Yarn
-- [has-package-lock](https://github.com/luftywiranda13/has-package-lock) - Check if a `package-lock.json` is present in the working directory
-- [pkg-man](https://github.com/luftywiranda13/pkg-man) - Detect which package manager that should be used
+- [has-yarn](https://github.com/sindresorhus/has-yarn) － Check if a project is using Yarn
+- [has-package-lock](https://github.com/luftywiranda13/has-package-lock) － Check if a `package-lock.json` is present in the working directory
+- [pkg-man](https://github.com/luftywiranda13/pkg-man) － Detect which package manager that should be used
 
 ## License
 
