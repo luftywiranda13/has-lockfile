@@ -4,9 +4,7 @@ const hasPackageLock = require('has-package-lock');
 const hasShrinkwrap = require('has-shrinkwrap');
 const hasYarn = require('has-yarn');
 
-const hasLockfile = cwd => {
-  cwd = cwd || process.cwd();
-
+const hasLockfile = (cwd = process.cwd()) => {
   const lockfiles = [];
 
   if (hasPackageLock(cwd)) {
