@@ -28,10 +28,12 @@ $ tree
 ├── foo
 │   ├── package.json
 │   └── yarn.lock
-└── qux
-    ├── package-lock.json
-    ├── package.json
-    └── yarn.lock
+├── qux
+│   ├── package-lock.json
+│   ├── package.json
+│   └── yarn.lock
+├── npm-shrinkwrap.json
+└── package.json
 ```
 
 ```js
@@ -48,6 +50,9 @@ hasLockfile('foo');
 
 hasLockfile('qux');
 //=> ['package-lock.json', 'yarn-lock']
+
+hasLockfile();
+//=> ['npm-shrinkwrap.json']
 ```
 
 ## API
@@ -65,8 +70,9 @@ Current working directory.
 
 ## Related
 
-* [has-yarn](https://github.com/sindresorhus/has-yarn) － Check if a project is using Yarn
 * [has-package-lock](https://github.com/luftywiranda13/has-package-lock) － Check if a `package-lock.json` is present in the working directory
+* [has-shrinkwrap](https://github.com/luftywiranda13/has-shrinkwrap) － Check if `npm-shrinkwrap.json` is present in the working directory
+* [has-yarn](https://github.com/sindresorhus/has-yarn) － Check if a project is using Yarn
 * [pkg-man](https://github.com/luftywiranda13/pkg-man) － Detect which package manager that should be used
 
 ## License
