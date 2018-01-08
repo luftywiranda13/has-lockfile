@@ -24,6 +24,7 @@
   ],
   "dependencies": {
     "has-package-lock": "^1.1.0",
+    "has-shrinkwrap": "^1.0.0",
     "has-yarn": "^1.0.0"
   },
   "devDependencies": {

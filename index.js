@@ -1,6 +1,7 @@
 'use strict';
 
 const hasPackageLock = require('has-package-lock');
+const hasShrinkwrap = require('has-shrinkwrap');
 const hasYarn = require('has-yarn');
 
 const hasLockfile = cwd => {
@@ -14,6 +15,10 @@ const hasLockfile = cwd => {
 
   if (hasYarn(cwd)) {
     lockfiles.push('yarn.lock');
+  }
+
+  if (hasShrinkwrap(cwd)) {
+    lockfiles.push('npm-shrinkwrap.json');
   }
 
   return lockfiles;
