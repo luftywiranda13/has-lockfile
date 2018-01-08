@@ -10,7 +10,7 @@
     "url": "https://www.luftywiranda.com"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
     "precommit": "remove-lockfiles && xo --fix && lint-staged",
@@ -24,6 +24,7 @@
   ],
   "dependencies": {
     "has-package-lock": "^1.1.0",
+    "has-shrinkwrap": "^1.0.0",
     "has-yarn": "^1.0.0"
   },
   "devDependencies": {
