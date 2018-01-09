@@ -24,35 +24,36 @@ $ tree
 │   ├── package-lock.json
 │   └── package.json
 ├── baz
-│   └── package.json
-├── foo
 │   ├── package.json
 │   └── yarn.lock
+├── foo
+│   ├── npm-shrinkwrap.json
+│   └── package.json
 ├── qux
+│   ├── npm-shrinkwrap.json
 │   ├── package-lock.json
 │   ├── package.json
 │   └── yarn.lock
-├── npm-shrinkwrap.json
 └── package.json
 ```
 
 ```js
 const hasLockfile = require('has-lockfile');
 
+hasLockfile();
+//=> []
+
 hasLockfile('bar');
 //=> ['package-lock.json']
 
 hasLockfile('baz');
-//=> []
-
-hasLockfile('foo');
 //=> ['yarn.lock']
 
-hasLockfile('qux');
-//=> ['package-lock.json', 'yarn-lock']
-
-hasLockfile();
+hasLockfile('foo');
 //=> ['npm-shrinkwrap.json']
+
+hasLockfile('qux');
+//=> ['package-lock.json', 'yarn.lock', 'npm-shrinkwrap.json']
 ```
 
 ## API
