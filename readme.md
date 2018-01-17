@@ -1,11 +1,11 @@
 # has-lockfile
 
-[![Package Version](https://img.shields.io/npm/v/has-lockfile.svg)](https://www.npmjs.com/package/has-lockfile)
-[![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/has-lockfile/master.svg)](https://travis-ci.org/luftywiranda13/has-lockfile)
-[![Coverage Status](https://img.shields.io/codecov/c/github/luftywiranda13/has-lockfile/master.svg)](https://codecov.io/gh/luftywiranda13/has-lockfile)
-[![Downloads Status](https://img.shields.io/npm/dm/has-lockfile.svg)](https://npm-stat.com/charts.html?package=has-lockfile&from=2016-04-01)
+> Detect lockfiles in the working directory
 
-Detect lockfiles in the working directory.
+[![Package Version](https://img.shields.io/npm/v/has-lockfile.svg?style=flat-square)](https://www.npmjs.com/package/has-lockfile)
+[![Downloads Status](https://img.shields.io/npm/dm/has-lockfile.svg?style=flat-square)](https://npm-stat.com/charts.html?package=has-lockfile&from=2016-04-01)
+[![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/has-lockfile/master.svg?style=flat-square)](https://travis-ci.org/luftywiranda13/has-lockfile)
+[![Coverage Status](https://img.shields.io/codecov/c/github/luftywiranda13/has-lockfile/master.svg?style=flat-square)](https://codecov.io/gh/luftywiranda13/has-lockfile)
 
 Useful for tools that need to know whether to use `yarn` or `npm`.
 
