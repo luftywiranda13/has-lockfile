@@ -7,7 +7,7 @@
 
 Detect lockfiles in the working directory.
 
-Useful for tools that needs to know whether to use `yarn` or `npm`.
+Useful for tools that need to know whether to use `yarn` or `npm`.
 
 ## Installation
 
@@ -41,18 +41,24 @@ $ tree
 const hasLockfile = require('has-lockfile');
 
 hasLockfile();
-//=> []
+// => false
 
 hasLockfile('bar');
+//=> true
+
+hasLockfile.lockfiles();
+//=> []
+
+hasLockfile.lockfiles('bar');
 //=> ['package-lock.json']
 
-hasLockfile('baz');
+hasLockfile.lockfiles('baz');
 //=> ['yarn.lock']
 
-hasLockfile('foo');
+hasLockfile.lockfiles('foo');
 //=> ['npm-shrinkwrap.json']
 
-hasLockfile('qux');
+hasLockfile.lockfiles('qux');
 //=> ['package-lock.json', 'yarn.lock', 'npm-shrinkwrap.json']
 ```
 
@@ -60,7 +66,11 @@ hasLockfile('qux');
 
 ### hasLockfile([cwd])
 
-Returns `Array<string>`.
+Returns `boolean`.
+
+### hasLockfile.lockfiles([cwd])
+
+Returns `Array` of lockfiles.
 
 #### cwd
 
