@@ -12,7 +12,7 @@ Useful for tools that need to know whether to use `yarn` or `npm`.
 ## Installation
 
 ```sh
-npm install --save has-lockfile
+npm install has-lockfile
 ```
 
 ## Usage

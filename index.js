@@ -4,14 +4,20 @@ const hasPackageLock = require('has-package-lock');
 const hasShrinkwrap = require('has-shrinkwrap');
 const hasYarn = require('has-yarn');
 
-const lockfiles = (cwd = process.cwd()) =>
-  [
+const lockfiles = (cwd = process.cwd()) => {
+  return [
     hasPackageLock(cwd) && 'package-lock.json',
     hasYarn(cwd) && 'yarn.lock',
     hasShrinkwrap(cwd) && 'npm-shrinkwrap.json',
   ].filter(Boolean);
+};
 
-const hasLockfile = (cwd = process.cwd()) => lockfiles(cwd).length > 0 && true;
+module.exports = (cwd = process.cwd()) => {
+  if (lockfiles(cwd).length > 0) {
+    return true;
+  }
 
-module.exports = hasLockfile;
+  return false;
+};
+
 module.exports.lockfiles = lockfiles;
