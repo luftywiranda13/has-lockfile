@@ -1,5 +1,7 @@
 # has-lockfile
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/luftywiranda13/has-lockfile.svg)](https://greenkeeper.io/)
+
 > Detect lockfiles in the working directory
 
 [![Package Version](https://img.shields.io/npm/v/has-lockfile.svg?style=flat-square)](https://www.npmjs.com/package/has-lockfile)
