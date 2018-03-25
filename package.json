@@ -13,7 +13,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "precommit": "remove-lockfiles && xo --fix && lint-staged",
+    "precommit": "remove-lockfiles && lint-staged",
     "pretest": "remove-lockfiles",
     "test:watch": "jest --watch",
     "test": "xo && jest --coverage"
@@ -31,28 +31,32 @@
     "husky": "^0.14.3",
     "jest": "^22.0.4",
     "lint-staged": "^7.0.0",
-    "prettier": "^1.9.2",
     "remove-lockfiles": "^2.0.4",
-    "xo": "^0.18.2"
+    "xo": "^0.20.3"
   },
   "jest": {
     "testEnvironment": "node"
   },
   "lint-staged": {
-    "*.{js,json,md}": [
+    "*.js": [
+      "xo --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
       "prettier --write",
       "git add"
     ]
   },
   "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5"
+    "bracketSpacing": true,
+    "singleQuote": true
   },
   "xo": {
-    "extends": "prettier",
     "envs": [
       "jest"
-    ]
+    ],
+    "prettier": true,
+    "space": true
   },
   "keywords": [
     "yarn",
