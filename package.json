@@ -24,7 +24,7 @@
   "dependencies": {
     "has-package-lock": "^2.0.0",
     "has-shrinkwrap": "^1.0.0",
-    "has-yarn": "^1.0.0"
+    "has-yarn": "^2.1.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^2.9.0",
